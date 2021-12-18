@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".user.chatLog.ChatLogActivity">
+
+    <EditText
+        android:id="@+id/edittext_chat_log"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Сообщение"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/send_message_chat_log"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/send_message_chat_log"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:text="Отправить"
+        android:textSize="8.5sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/edittext_chat_log"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edittext_chat_log" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_chat_log"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_for_chat2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        app:layout_constraintBottom_toTopOf="@+id/edittext_chat_log"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginTop="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

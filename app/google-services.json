@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83423832816",
+    "project_id": "messangernikol",
+    "storage_bucket": "messangernikol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83423832816:android:ef8a0d04113ea1bc7df035",
+        "android_client_info": {
+          "package_name": "com.example.messanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83423832816-bs1ace3q2dpfifh5bsbbfi9tb4ddrl0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Z_vOxcjWtaWacJByoaQDejroCJHqOWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83423832816-bs1ace3q2dpfifh5bsbbfi9tb4ddrl0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
