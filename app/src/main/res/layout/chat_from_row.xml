@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="18dp"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="5dp">
 
 <!--    <de.hdodenhof.circleimageview.CircleImageView-->
 <!--        android:id="@+id/imageView_chat_from_row"-->
@@ -23,12 +23,13 @@
         android:id="@+id/textView_chat_from_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:background="@drawable/input_bg"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/input_bg1"
         android:maxWidth="240dp"
         android:padding="16dp"
         android:text="Сообщение"
         android:textColor="@color/black"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

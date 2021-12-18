@@ -7,5 +7,5 @@ data class ChatMessage(
     val toId: String,
     val timestamp: Long
 ) {
-    constructor() : this("", "", "", "", -1)
+    constructor() : this("", "", "", "", 0)
 }

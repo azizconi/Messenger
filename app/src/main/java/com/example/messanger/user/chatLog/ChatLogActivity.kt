@@ -59,22 +59,24 @@ class ChatLogActivity : AppCompatActivity() {
         val fromId = FirebaseAuth.getInstance().uid
         val toId = toUser?.uid
 
-        val ref = FirebaseDatabase.getInstance().reference.child("/user-messages/$fromId/$toId")
-
+        val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId")
+//
 
 
 
         ref.addChildEventListener(object : ChildEventListener {
+
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
+
+
                 val chatMessage = snapshot.getValue(ChatMessage::class.java)
+
+
                 if (chatMessage != null) {
 
                     if (chatMessage.fromId == FirebaseAuth.getInstance().uid) {
-
                         val currentUser = UserActivity.currentUser ?: return
                         adapter.add(ChatToItem(chatMessage.text, currentUser))
-
-
                     } else {
                         adapter.add(ChatFromItem(chatMessage.text, toUser!!))
                     }
@@ -113,12 +115,12 @@ class ChatLogActivity : AppCompatActivity() {
 
 
         if (fromId == null) return
-//        val reference = FirebaseDatabase.getInstance().getReference("messages").push()
+
         val reference =
             FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId").push()
 
         val toReference =
-            FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId")
+            FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
 
 
 
@@ -144,7 +146,7 @@ class ChatLogActivity : AppCompatActivity() {
 
         val latestMessageToRef =
             FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
-        latestMessageRef.setValue(chatMessage)
+        latestMessageToRef.setValue(chatMessage)
 
     }
 
